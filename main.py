@@ -17,7 +17,7 @@ def main():
 
     # 4. Pobranie słów od użytkownika
     words = []
-    for i in range(num_words):2
+    for i in range(num_words):
         word = input(f"Podaj słowo {i + 1}: ")
         words.append(word)
 
