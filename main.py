@@ -4,21 +4,21 @@ def count_words_in_line(line, word):
 
 def main():
     # 1. Pobranie liczby linijek tekstu
-    num_lines = int(input("Podaj liczbę linijek tekstu: "))
+    num_lines = int(input(""))
 
     # 2. Pobranie tekstu od użytkownika
     lines = []
     for i in range(num_lines):
-        line = input(f"Podaj linijkę {i + 1}: ")
+        line = input(f"")
         lines.append(line)
 
     # 3. Pobranie liczby słów do wyszukania
-    num_words = int(input("Podaj liczbę słów do wyszukania: "))
+    num_words = int(input(""))
 
     # 4. Pobranie słów od użytkownika
     words = []
     for i in range(num_words):
-        word = input(f"Podaj słowo {i + 1}: ")
+        word = input(f"")
         words.append(word)
 
     # 5. Dla każdego słowa zliczenie i posortowanie linijek
@@ -28,7 +28,7 @@ def main():
         sorted_counts = sorted(counts, key=lambda x: x[1], reverse=True)
         sorted_lines = [line_num for line_num, count in sorted_counts]
 
-        print(f"\nIndeksy dla słowa '{word}': {sorted_lines}")
+        print(f"'{word}': {sorted_lines}")
 
 if __name__ == "__main__":
     main()
