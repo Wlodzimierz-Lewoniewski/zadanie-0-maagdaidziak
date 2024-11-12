@@ -23,12 +23,12 @@ def main():
 
     # 5. Dla każdego słowa zliczenie i posortowanie linijek
     for word in words:
-        counts = [(i + 1, count_words_in_line(line, word)) for i, line in enumerate(lines)]
+        counts = [(i, count_words_in_line(line, word)) for i, line in enumerate(lines)]
         # Sortowanie według liczby wystąpień (najpierw najwięcej)
         sorted_counts = sorted(counts, key=lambda x: x[1], reverse=True)
-        sorted_lines = [line_num for line_num, count in sorted_counts]
+        sorted_lines = [line_num for line_num, count in sorted_counts if count > 0]
 
-        print(f"'{word}': {sorted_lines}")
+        print(sorted_lines)
 
 if __name__ == "__main__":
     main()
